@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghid Configurare Server Minecraft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Community Developer Placeholders/tutorials</div>
+            <ul>
+                <li><a href="#scoreboard">SimpleScore</a></li>
+                <li><a href="#tab">TAB</a></li>
+                <li><a href="#luckperms">LuckPerms</a></li>
+                <li><a href="#crates">CratesReloaded</a></li>
+                <li><a href="#shop">EconomyShopGUI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="scoreboard">
+            <h2>SimpleScore Configurare</h2>
+            <div class="feature-box">
+                <h3>Statistici Personalizate</h3>
+                <ul>
+                    <li>Jucători Online</li>
+                    <li>Sistem Monetar</li>
+                    <li>Timp în Joc</li>
+                </ul>
+                <div class="code-example">
+                    <pre>
+scoreboard:
+  title: "&6&lServerul Tău"
+  lines:
+    - "&fJucători: &a%online%"
+    - "&fBani: &e%vault_eco_balance%"
+    - "&fTimp: &b%playtime%"
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab">
+            <h2>Configurare TAB</h2>
+            <div class="feature-box">
+                <h3>Personalizare Tab List</h3>
+                <ul>
+                    <li>Ranguri Personalizate</li>
+                    <li>Header/Footer Dinamic</li>
+                    <li>Culori Personalizate</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="luckperms">
+            <h2>Configurare LuckPerms</h2>
+            <div class="feature-box">
+                <h3>Configurare Prefixuri</h3>
+                <ul>
+                    <li>Sincronizare cu TAB</li>
+                    <li>Prefixuri pe Lumi</li>
+                    <li>Sistem de Permisiuni</li>
+                </ul>
+                <div class="code-example">
+                    <pre>
+# Exemplu configurare prefix în LuckPerms
+/lp group admin meta setprefix "&4[Admin] "
+/lp group vip meta setprefix "&6[VIP] "
+/lp group default meta setprefix "&7[Jucător] "
+
+# Prefix specific pentru o lume
+/lp group vip meta setprefix "&e[VIP] " world_survival
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="crates">
+            <h2>Configurare CratesReloaded</h2>
+            <div class="feature-box">
+                <h3>Sistem de Cutii</h3>
+                <ul>
+                    <li>Cutii cu Șanse Personalizate</li>
+                    <li>Animații la Deschidere</li>
+                    <li>Recompense Unice</li>
+                </ul>
+                <div class="code-example">
+                    <pre>
+VIPCrate:
+  type: CSGO
+  animation: CSGO
+  items:
+    - item: DIAMOND_SWORD
+      chance: 10
+      enchantments:
+        - SHARPNESS:5
+      name: "&6Sabie VIP"
+    - item: DIAMOND_BLOCK
+      chance: 30
+      amount: 64
+    - item: EXPERIENCE_BOTTLE
+      chance: 60
+      amount: 32
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="shop">
+            <h2>Configurare EconomyShopGUI</h2>
+            <div class="feature-box">
+                <h3>Shop Personalizat</h3>
+                <ul>
+                    <li>Categorii Custom</li>
+                    <li>Prețuri Dinamice</li>
+                    <li>Mesaje Personalizate</li>
+                </ul>
+                <div class="code-example">
+                    <pre>
+shop:
+  blocks:
+    title: "&8Magazin Blocuri"
+    items:
+      diamond_block:
+        material: DIAMOND_BLOCK
+        buy-price: 1000
+        sell-price: 800
+        messages:
+          bought: "&aAi cumpărat &b%amount% &ablocuri de diamant!"
+          sold: "&aAi vândut &b%amount% &ablocuri de diamant!"
+      
+  armura:
+    title: "&8Magazin Armură"
+    items:
+      diamond_chestplate:
+        material: DIAMOND_CHESTPLATE
+        buy-price: 5000
+        sell-price: 4000
+                    </pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Ghid Configurare Minecraft</p>
+    </footer>
+</body>
+</html> 
